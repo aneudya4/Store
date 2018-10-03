@@ -1,5 +1,6 @@
 import axios from "axios";
 export const FETCH_ITEMS = "FETCH_ITEMS";
+export const ADD_TO_CART = "ADD_TO_CART";
 
 export const fetchItems = () => async dispatch => {
   const url =
@@ -8,6 +9,13 @@ export const fetchItems = () => async dispatch => {
   dispatch({
     type: FETCH_ITEMS,
     payload: res.data.results
+  });
+};
+
+export const addToCart = product => async dispatch => {
+  dispatch({
+    type: ADD_TO_CART,
+    payload: product
   });
 };
 

@@ -1,3 +1,4 @@
+a,
 a:visited {
   color: black;
 }
@@ -19,6 +20,5 @@ a:visited {
 }
 
 .product-info {
-  /* background: gray; */
   text-align: center;
 }

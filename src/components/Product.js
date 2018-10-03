@@ -4,19 +4,12 @@ import "./product.css";
 
 class product extends Component {
   render() {
-    const {
-      images,
-      names,
-      prices,
-      customerReviews,
-      descriptions
-    } = this.props.camera;
-    console.log(images.standard);
+    const { images, names, prices, customerReviews, sku } = this.props.camera;
     return (
       <div className="product-wrapper">
-        <Link to="/product/:id">
+        <Link to={`/product/${sku}`}>
           <div className="product-info">
-            <img src={images.standard} />
+            <img src={images.standard} alt={names.title} />
             <p>{names.title}</p>
             <span className="price">
               <strong>{prices.current}</strong>

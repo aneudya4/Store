@@ -8,7 +8,6 @@ class Main extends Component {
     this.props.fetchItems();
   }
   render() {
-    console.log(this.props.cameras);
     return (
       <div>
         <h1> Main </h1>
@@ -19,9 +18,10 @@ class Main extends Component {
     );
   }
 }
-const mapStateToPro = ({ cameras }) => {
+const mapStateToPro = ({ cameras, cart }) => {
   return {
-    cameras: cameras
+    cameras: cameras,
+    cart: cart
   };
 };
 
