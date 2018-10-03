@@ -3,14 +3,22 @@ import React, { Component } from "react";
 
 class Cart extends Component {
   render() {
-    console.log("cart", this.props.cart);
-    return <h1>Cart</h1>;
+    const {
+      images,
+      names,
+      prices,
+      descriptions,
+      sku,
+      customerReviews
+    } = this.props.cart[0];
+    console.log(this.props.cart[0].names);
+    return <h1>{names.title}</h1>;
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ cart }) => {
   return {
-    cart: state.cart
+    cart
   };
 };
 
