@@ -3,8 +3,8 @@ import CamerasReducer from "./CamerasReducer";
 import CartReducer from "./CartReducer";
 
 const rootReducer = combineReducers({
-  cameras: CamerasReducer,
-  cart: CartReducer
+  phones: CamerasReducer,
+  accesories: CartReducer
 });
 
 export default rootReducer;

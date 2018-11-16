@@ -1,0 +1,22 @@
+.select-products {
+  background-color: $header-bgcolor;
+  text-align: center;
+  padding: 3rem;
+  margin: 5rem 0;
+
+  li {
+    display: inline-block;
+    font-size: 4rem;
+    width: 50%;
+    margin-bottom: -1rem;
+    padding-bottom: -2rem;
+  }
+
+  a {
+    color: $text-color-white;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}

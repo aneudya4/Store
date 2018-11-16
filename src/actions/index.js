@@ -5,7 +5,7 @@ export const REMOVE_FROM_CART = "REMOVE_FROM CART ";
 
 export const fetchItems = () => async dispatch => {
   const url =
-    "https://api.bestbuy.com/beta/products/trendingViewed(categoryId=abcat0400000)?apiKey=zOyps5iN0ySoVtDgXtubx35V";
+    "https://api.bestbuy.com/beta/products/mostViewed(categoryId=pcmcat305200050000)?apiKey=zOyps5iN0ySoVtDgXtubx35V";
   const res = await axios.get(url);
   dispatch({
     type: FETCH_ITEMS,
@@ -32,3 +32,13 @@ export const removeFromCart = product => async dispatch => {
 
 // most viewed "https://api.bestbuy.com/beta/products/mostViewed(categoryId=abcat0107000)?apiKey=zOyps5iN0ySoVtDgXtubx35V"
 // laptops https://api.bestbuy.com/beta/products/openBox(categoryId=abcat0502000)?apiKey=zOyps5iN0ySoVtDgXtubx35V
+
+//  original api call
+//     "https://api.bestbuy.com/beta/products/trendingViewed(categoryId=abcat0400000)?apiKey=zOyps5iN0ySoVtDgXtubx35V";
+
+// iphopne
+//     "https://api.bestbuy.com/beta/products/mostViewed(categoryId=pcmcat305200050000)?apiKey=zOyps5iN0ySoVtDgXtubx35V";
+
+// accesories
+
+// "    "https://api.bestbuy.com/beta/products/mostViewed(categoryId=abcat0811006)?apiKey=zOyps5iN0ySoVtDgXtubx35V";

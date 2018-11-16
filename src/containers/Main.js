@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { fetchItems } from "../actions/index";
 import Product from "../components/Product";
+import MainBanner from "./MainBanner";
+import SectionSelection from "../components/SectionSelection";
 
 import { connect } from "react-redux";
 class Main extends Component {
@@ -9,23 +11,26 @@ class Main extends Component {
   }
   render() {
     return (
-      <div>
-        <h1> Main </h1>
-        {this.props.cameras.map(camera => (
-          <Product key={camera.sku} camera={camera} />
-        ))}
-      </div>
+      <React.Fragment>
+        <MainBanner />
+        <SectionSelection />
+        <section className="products">
+          {this.props.phones.map(phone => (
+            <Product key={phone.sku} phone={phone} />
+          ))}
+        </section>
+      </React.Fragment>
     );
   }
 }
-const mapStateToPro = ({ cameras, cart }) => {
+const mapStateToProps = ({ phones, cart }) => {
   return {
-    cameras: cameras,
-    cart: cart
+    phones,
+    cart
   };
 };
 
 export default connect(
-  mapStateToPro,
+  mapStateToProps,
   { fetchItems }
 )(Main);

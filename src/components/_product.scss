@@ -1,0 +1,32 @@
+.product-wrapper {
+  box-sizing: border-box;
+  &:last-child {
+    display: none;
+  }
+}
+
+.product-info {
+  height: 20rem;
+  margin-bottom: 10rem;
+  text-align: center;
+  width: calc(100% / 3);
+  float: left;
+
+  figure {
+    font-size: 2rem;
+    img {
+      width: 20%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: left;
+  }
+
+  .price,
+  .reviews {
+    font-size: 1.5rem;
+  }
+}

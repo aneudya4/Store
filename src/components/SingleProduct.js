@@ -1,12 +1,18 @@
 import { connect } from "react-redux";
-import { addToCart } from "./../actions/index";
+import { addToCart, removeFromCart } from "./../actions/index";
+import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 class SigleProduct extends Component {
-  onClick = product => {
+  onClickAdd = product => {
     this.props.addToCart(product);
   };
+
+  onClickRemove = product => {
+    this.props.removeFromCart(product);
+  };
   render() {
+    console.log(this.props);
     const {
       images,
       names,
@@ -36,10 +42,16 @@ class SigleProduct extends Component {
         </div>
 
         <div className="btns">
-          <button onClick={() => this.onClick(this.props.product)}>
+          <button onClick={() => this.onClickAdd(this.props.product)}>
             {" "}
             Add to Cart{" "}
           </button>
+
+          <button onClick={() => this.onClickRemove(this.props.product)}>
+            Remove From Cart{" "}
+          </button>
+          <Link to="/cart">Go to cart</Link>
+          <Link to="/home"> Back home </Link>
         </div>
       </div>
     );
@@ -48,7 +60,7 @@ class SigleProduct extends Component {
 
 export default connect(
   null,
-  { addToCart }
+  { addToCart, removeFromCart }
 )(SigleProduct);
 
 // products also viewed https://api.bestbuy.com/beta/products/5959400/alsoViewed?apiKey=zOyps5iN0ySoVtDgXtubx35V

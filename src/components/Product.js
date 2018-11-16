@@ -1,22 +1,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./product.css";
 
 class product extends Component {
   render() {
-    const { images, names, prices, customerReviews, sku } = this.props.camera;
+    // console.log(this.props.camera);
+    const { images, names, prices, customerReviews, sku } = this.props.phone;
     return (
       <div className="product-wrapper">
-        <Link to={`/product/${sku}`}>
-          <div className="product-info">
-            <img src={images.standard} alt={names.title} />
-            <p>{names.title}</p>
-            <span className="price">
-              <strong>{prices.current}</strong>
+        <div className="product-info">
+          <Link to={`/product/${sku}`}>
+            <figure>
+              <img src={images.standard} alt={names.title} />
+              <figcaption>{names.title}</figcaption>
+            </figure>
+
+            <span className="price">Price:{prices.current}</span>
+            <br />
+            <span className="reviews">
+              {" "}
+              Reviews Score:{customerReviews.averageScore}
             </span>
-            <span className="reviews">{customerReviews.averageScore}</span>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     );
   }

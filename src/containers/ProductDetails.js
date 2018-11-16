@@ -1,28 +1,37 @@
+import { fetchItems } from "./../actions/index";
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import SingleProduct from "../components/SingleProduct";
 import Cart from "../containers/Cart";
 class ProductDetails extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    const { activePhone, fetchItems } = this.props;
+    if (activePhone.length === 0) {
+      fetchItems();
+    }
+  }
   render() {
     const { id } = this.props.match.params;
-    const { activeCamera } = this.props;
-    const product = activeCamera.find(c => c.sku === id);
-
+    const { activePhone } = this.props;
+    const product = activePhone.find(c => c.sku === id);
+    const loadingProduct = <div> Loading </div>;
     return (
       <div>
-        <SingleProduct product={product} />
-        {this.props.cart.length > 0 ? <Cart /> : null}
+        {!product && loadingProduct}
+        {product && <SingleProduct product={product} />}
       </div>
     );
   }
 }
 
-const mapStateToPros = ({ cameras, cart }) => {
+const mapStateToProps = ({ phones, cart }) => {
   return {
-    activeCamera: cameras,
+    activePhone: phones,
     cart
   };
 };
 
-export default connect(mapStateToPros)(ProductDetails);
+export default connect(
+  mapStateToProps,
+  { fetchItems }
+)(ProductDetails);

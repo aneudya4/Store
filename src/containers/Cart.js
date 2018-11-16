@@ -11,8 +11,13 @@ class Cart extends Component {
       sku,
       customerReviews
     } = this.props.cart[0];
-    console.log(this.props.cart[0].names);
-    return <h1>{names.title}</h1>;
+    console.log(this.props.cart);
+    return (
+      <div>
+        <h1>{names.title}</h1>
+        <img src={images.standard} alt="cell" />
+      </div>
+    );
   }
 }
 

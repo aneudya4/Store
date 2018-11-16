@@ -1,0 +1,38 @@
+.header {
+  font-size: 2rem;
+  background-color: $header-bgcolor;
+  margin-bottom: 2rem;
+  color: $text-color-white;
+
+  &-logo-left {
+    display: inline-block;
+  }
+
+  &-links-right {
+    float: right;
+
+    a,
+    a:visited {
+      color: $text-color-white;
+      pointer: hand;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.navigation {
+  padding: 1rem;
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 2rem;
+    a {
+      text-decoration: none;
+    }
+  }
+}
