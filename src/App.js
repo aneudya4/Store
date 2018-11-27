@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import Main from "./containers/Main";
+import PhoneItems from "./components/PhoneItems";
 import ProductDetails from "./containers/ProductDetails";
-import Header from "./containers/Header";
 import Cart from "./containers/Cart";
 
 import "./sass/App.scss";
+import AccesoriesItems from "./components/AccesoriesItems";
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/product/:id" component={ProductDetails} />
-          <Route path="/cart" component={Cart} />
-        </Switch>
+        <section className="products">
+          <Switch>
+            <Route exact path="/" component={PhoneItems} />
+            <Route exact path="/accesories" component={AccesoriesItems} />
+            <Route path="/product/:PhoneId" component={ProductDetails} />
+            <Route path="/cart" component={Cart} />
+          </Switch>
+        </section>
       </React.Fragment>
     );
   }

@@ -2,21 +2,22 @@ import { fetchItems } from "./../actions/index";
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import SingleProduct from "../components/SingleProduct";
-import Cart from "../containers/Cart";
+import Header from "./Header";
 class ProductDetails extends Component {
   componentDidMount() {
     const { activePhone, fetchItems } = this.props;
     if (activePhone.length === 0) {
-      fetchItems();
+      fetchItems(this.props.match.path.toString());
     }
   }
   render() {
-    const { id } = this.props.match.params;
+    const { PhoneId } = this.props.match.params;
     const { activePhone } = this.props;
-    const product = activePhone.find(c => c.sku === id);
+    const product = activePhone.find(c => c.sku === PhoneId);
     const loadingProduct = <div> Loading </div>;
     return (
       <div>
+        <Header />
         {!product && loadingProduct}
         {product && <SingleProduct product={product} />}
       </div>

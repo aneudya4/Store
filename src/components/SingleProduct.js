@@ -51,7 +51,7 @@ class SigleProduct extends Component {
             Remove From Cart{" "}
           </button>
           <Link to="/cart">Go to cart</Link>
-          <Link to="/home"> Back home </Link>
+          <Link to="/"> Back home </Link>
         </div>
       </div>
     );

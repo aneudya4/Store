@@ -8,14 +8,14 @@ const SectionSelection = () => {
         <ul>
           <li>
             <Link to="/">
-              <i class="fa fa-mobile" aria-hidden="true" />
+              <i className="fa fa-mobile" aria-hidden="true" />
               <p>Check out our Phone Accesories</p>
             </Link>
           </li>
           <li>
             {" "}
             <Link to="/accesories">
-              <i class="fa fa-headphones" aria-hidden="true" />
+              <i className="fa fa-headphones" aria-hidden="true" />
               <p>Check out our Phone Accesories</p>
             </Link>
           </li>
