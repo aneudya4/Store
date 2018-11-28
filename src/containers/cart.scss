@@ -1,0 +1,39 @@
+.empty-cart {
+  font-size: 4rem;
+
+  .btn {
+    font-size: 3rem;
+    float: right;
+  }
+
+  &-msg {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 6rem;
+    padding: 3rem;
+  }
+
+  p {
+    background: lightgrey;
+    padding: 3rem;
+  }
+  i {
+    width: 4rem;
+    display: inline-block;
+    margin-left: 5rem;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.checkout {
+  width: 90rem;
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: right;
+  margin-top: 1rem;
+  background: white;
+}

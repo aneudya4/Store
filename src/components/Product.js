@@ -1,3 +1,5 @@
+import { addToCart } from "./../actions/index";
+import { connect } from "react-redux";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
@@ -18,14 +20,20 @@ class product extends Component {
               <br />
               <span className="reviews">
                 {" "}
-                Reviews Score:{customerReviews.averageScore}
+                {/* Reviews Score:{customerReviews.averageScore} */}
               </span>
             </div>
           </Link>
+          <button onClick={() => this.props.addToCart(this.props.item)}>
+            Add To Cart
+          </button>
         </div>
       </div>
     );
   }
 }
 
-export default product;
+export default connect(
+  null,
+  { addToCart }
+)(product);

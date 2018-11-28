@@ -12,7 +12,6 @@ class SigleProduct extends Component {
     this.props.removeFromCart(product);
   };
   render() {
-    console.log(this.props);
     const {
       images,
       names,

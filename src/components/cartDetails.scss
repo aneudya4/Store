@@ -1,0 +1,27 @@
+.cart-items {
+  font-size: 2rem;
+  width: 90rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  background: white;
+  .cart-buying-option {
+    text-align: center;
+  }
+
+  &-img {
+    padding: 10rem;
+
+    display: inline;
+
+    img {
+      width: 17%;
+    }
+  }
+  &-details {
+    span {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
