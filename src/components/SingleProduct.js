@@ -8,24 +8,20 @@ class SigleProduct extends Component {
     this.props.addToCart(product);
   };
 
-  onClickRemove = product => {
-    this.props.removeFromCart(product);
-  };
   render() {
     const {
       images,
       names,
       prices,
       descriptions,
-      sku,
+
       customerReviews
     } = this.props.product;
 
     return (
       <div className="single-product">
         <h1>{names.title} </h1>
-
-        <img src={images.standard} alt={sku} />
+        <img src={images.standard} alt={names.title} />
         <p className="item-description"> {descriptions.short}</p>
         <div className="single-price">
           {
@@ -37,7 +33,9 @@ class SigleProduct extends Component {
             {" "}
             {prices.current !== prices.regular ? "WAS:" + prices.regular : null}
           </span>
-          <span>vote average : {customerReviews.averageScore}</span>
+          <span className="vote">
+            vote average : {customerReviews.averageScore}
+          </span>
         </div>
 
         <div className="btns">
@@ -46,11 +44,14 @@ class SigleProduct extends Component {
             Add to Cart{" "}
           </button>
 
-          <button onClick={() => this.onClickRemove(this.props.product)}>
-            Remove From Cart{" "}
-          </button>
-          <Link to="/cart">Go to cart</Link>
-          <Link to="/"> Back home </Link>
+          <Link to="/cart">
+            Go to &rarr;{" "}
+            <i className="fa fa-shopping-cart" aria-hidden="true" />
+          </Link>
+          <Link to="/">
+            {" "}
+            Back home &larr; <i className="fas fa-home" />
+          </Link>
         </div>
       </div>
     );

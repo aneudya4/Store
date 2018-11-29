@@ -6,8 +6,8 @@ const CartReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return [...state, action.payload];
     case REMOVE_FROM_CART:
-      const newState = state.find(p => p.sku !== action.payload.sku);
-      return [...state, newState];
+      const newState = state.filter(p => p.sku !== action.payload.sku);
+      return newState;
     default:
       return state;
   }

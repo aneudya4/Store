@@ -8,7 +8,6 @@ class Cart extends Component {
   render() {
     const { cart } = this.props;
     let total = null;
-    console.log(cart);
     if (this.props.cart.length === 0) {
       return (
         <div className="empty-cart">
@@ -30,7 +29,7 @@ class Cart extends Component {
     }
 
     total =
-      cart.length > 1
+      cart.length > 0
         ? cart.reduce((a, b) => a + b.prices.regular, 0)
         : cart[0].prices.regular;
 
