@@ -1,4 +1,4 @@
-import { addToCart } from "./../actions/index";
+import { addToCart } from "../actions/index";
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
@@ -38,6 +38,7 @@ class product extends Component {
             </div>
           </Link>
           <button
+            className="add-to-cart"
             disable={this.state.activeButton.toString()}
             onClick={() => this.onClickAdd(this.props.item)}
           >

@@ -1,7 +1,7 @@
 import { FETCH_ITEMS } from "../actions";
 const initialState = [];
 
-const PhonesReducer = (state = initialState, action) => {
+const itemsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ITEMS:
       return action.payload;
@@ -10,4 +10,4 @@ const PhonesReducer = (state = initialState, action) => {
   }
 };
 
-export default PhonesReducer;
+export default itemsReducer;

@@ -6,7 +6,6 @@ export const REMOVE_FROM_CART = "REMOVE_FROM CART ";
 
 export const fetchItems = route => async dispatch => {
   const url = route;
-
   const res = await axios.get(url);
   dispatch({
     type: FETCH_ITEMS,

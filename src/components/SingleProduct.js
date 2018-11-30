@@ -4,9 +4,24 @@ import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 class SigleProduct extends Component {
-  onClickAdd = product => {
-    this.props.addToCart(product);
+  state = {
+    activeButton: false
   };
+  onClickAdd = product => {
+    let newItem = this.props.cart.find(i => i.sku === product.sku);
+    if (newItem) {
+      this.setState({ activeButton: true });
+      return null;
+    } else {
+      return this.props.addToCart(product);
+    }
+  };
+
+  componentDidMount() {
+    this.setState({
+      activeButton: this.props.cart.find(i => i.sku === this.props.path)
+    });
+  }
 
   render() {
     const {
@@ -14,7 +29,6 @@ class SigleProduct extends Component {
       names,
       prices,
       descriptions,
-
       customerReviews
     } = this.props.product;
 
@@ -39,7 +53,10 @@ class SigleProduct extends Component {
         </div>
 
         <div className="btns">
-          <button onClick={() => this.onClickAdd(this.props.product)}>
+          <button
+            disabled={this.state.activeButton}
+            onClick={() => this.onClickAdd(this.props.product)}
+          >
             {" "}
             Add to Cart{" "}
           </button>
@@ -58,8 +75,14 @@ class SigleProduct extends Component {
   }
 }
 
+const mapStateToProps = ({ cart }) => {
+  return {
+    cart
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   { addToCart, removeFromCart }
 )(SigleProduct);
 

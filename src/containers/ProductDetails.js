@@ -1,3 +1,4 @@
+import { phonesAccesories, phonesItems } from "./../api endpoint/Constants";
 import { fetchItems } from "./../actions/index";
 import { connect } from "react-redux";
 import React, { Component } from "react";
@@ -7,7 +8,8 @@ class ProductDetails extends Component {
   componentDidMount() {
     const { activePhone, fetchItems } = this.props;
     if (activePhone.length === 0) {
-      fetchItems(this.props.match.path.toString());
+      fetchItems(phonesItems);
+      fetchItems(phonesAccesories);
     }
   }
   render() {
@@ -19,7 +21,12 @@ class ProductDetails extends Component {
       <div>
         <Header />
         {!product && loadingProduct}
-        {product && <SingleProduct product={product} />}
+        {product && (
+          <SingleProduct
+            path={this.props.match.params.PhoneId}
+            product={product}
+          />
+        )}
       </div>
     );
   }
