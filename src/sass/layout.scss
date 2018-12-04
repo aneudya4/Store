@@ -1,15 +1,19 @@
 * {
-  margin: 0;
-  padding: 0;
+  // padding: 0;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 body {
-  background-color: grey;
+  background-color: lighten(lightgrey, 8%);
 }
+
 html {
+  // color:light
   font-size: 10px;
+  font-family: "Noto Sans SC", sans-serif;
   padding: 1rem 3rem;
+  // position: relative;
 }
 
 li {

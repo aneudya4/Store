@@ -1,6 +1,13 @@
 .empty-cart {
+  span {
+    color: $header-bgcolor;
+  }
+
   font-size: 4rem;
 
+  a {
+    color: $header-bgcolor;
+  }
   .btn {
     font-size: 3rem;
     float: right;
@@ -14,14 +21,16 @@
   }
 
   p {
-    background: lightgrey;
     padding: 3rem;
+    text-transform: capitalize;
   }
   p i {
     width: 4rem;
     display: inline-block;
     margin-left: 5rem;
+    color: $header-bgcolor;
   }
+
   &::after {
     content: "";
     display: block;
@@ -30,10 +39,13 @@
 }
 
 .checkout {
+  .fa-credit-card {
+    color: $header-bgcolor;
+  }
   width: 90rem;
   margin: 0 auto;
   font-size: 3rem;
-  text-align: right;
+  text-align: center;
   margin-top: 1rem;
   background: white;
 }

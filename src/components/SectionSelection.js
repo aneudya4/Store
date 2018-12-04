@@ -9,7 +9,7 @@ const SectionSelection = () => {
           <li>
             <Link to="/">
               <i className="fa fa-mobile" aria-hidden="true" />
-              <p>Check out our Phone Accesories</p>
+              <p>Check out our Phones</p>
             </Link>
           </li>
           <li>

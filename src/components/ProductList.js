@@ -18,6 +18,11 @@ class product extends Component {
   };
   render() {
     const { images, names, prices, customerReviews, sku } = this.props.item;
+    console.log(images);
+    const img = images.standard
+      ? images.standard
+      : " https://img.bbystatic.com/BestBuy_US/images/products/5967/5967100_sa.jpg";
+
     return (
       <div className="product-wrapper">
         {this.state.activeButton && alert("product already in cart")}
@@ -25,25 +30,27 @@ class product extends Component {
           <Link to={`/product/${sku}`}>
             <div className="phone-card">
               <figure>
-                <img src={images.standard} alt={names.title} />
-                <figcaption>{names.title}</figcaption>
+                <img src={img} alt={names.title} />
               </figure>
+              <div className="item-info">
+                <span className="item-title">{names.title}</span>
 
-              <span className="price">Price:{prices.current}</span>
-              <br />
-              <span className="reviews">
-                {" "}
-                Reviews Score:{customerReviews.averageScore}
-              </span>
+                <span className="price">Price:{prices.current}</span>
+                {/* <br /> */}
+                <span className="reviews">
+                  {" "}
+                  Reviews Score:{customerReviews.averageScore}
+                </span>
+                <button
+                  className="add-to-cart"
+                  disable={this.state.activeButton.toString()}
+                  onClick={() => this.onClickAdd(this.props.item)}
+                >
+                  Add To Cart
+                </button>
+              </div>
             </div>
           </Link>
-          <button
-            className="add-to-cart"
-            disable={this.state.activeButton.toString()}
-            onClick={() => this.onClickAdd(this.props.item)}
-          >
-            Add To Cart
-          </button>
         </div>
       </div>
     );

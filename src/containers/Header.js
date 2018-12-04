@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-left">I-mobile</div>
+      <div className="header-left">
+        <Link to="/">I-World</Link>
+      </div>
       <div className="header-links-right">
         <nav className="navigation">
           <ul>
@@ -15,7 +17,7 @@ const Header = () => {
             </li>
             <li>
               <Link to="/cart">
-                <i class="fas fa-shopping-cart" />
+                <i className="fas fa-shopping-cart" />
               </Link>
             </li>
           </ul>

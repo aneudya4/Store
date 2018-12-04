@@ -12,10 +12,10 @@ const Cart = props => {
       <div className="empty-cart">
         {" "}
         <Header />
-        Your Cart
+        <span> Your Cart</span>
         <div className="btn">
           {" "}
-          <Link to="/">Start Shopping</Link>
+          <Link to="/">Go Shopping</Link>
         </div>
         <div className="empty-cart-msg">
           <p>
@@ -39,6 +39,7 @@ const Cart = props => {
         <CartDetails key={item.sku} item={item} total={total} />
       ))}{" "}
       <div className="checkout">
+        <i className="fas fa-credit-card" />
         <h3>TOTAL:{total.toFixed(2)}</h3>
       </div>
     </div>

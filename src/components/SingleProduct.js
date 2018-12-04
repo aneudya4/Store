@@ -57,8 +57,7 @@ class SigleProduct extends Component {
             disabled={this.state.activeButton}
             onClick={() => this.onClickAdd(this.props.product)}
           >
-            {" "}
-            Add to Cart{" "}
+            {this.state.activeButton ? "Already in cart" : "Add To Cart"}
           </button>
 
           <Link to="/cart">

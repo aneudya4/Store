@@ -18,12 +18,15 @@ class AccesoriesItems extends Component {
         <Header />
         <MainBanner />
         <SectionSelection />
-        {items.map(item => (
-          <ProductList key={item.sku} item={item} />
-        ))}{" "}
+        <div className="product-grid">
+          {items.map(item => (
+            <ProductList key={item.sku} item={item} />
+          ))}{" "}
+        </div>
       </React.Fragment>
     );
   }
+  //ProductList(Products)->ProductItem
 }
 
 const mapStateToProps = ({ phonesAccesories }) => {
