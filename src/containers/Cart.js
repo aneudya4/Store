@@ -15,7 +15,7 @@ const Cart = props => {
         <span> Your Cart</span>
         <div className="btn">
           {" "}
-          <Link to="/">Go Shopping</Link>
+          <Link to="/Store">Go Shopping</Link>
         </div>
         <div className="empty-cart-msg">
           <p>

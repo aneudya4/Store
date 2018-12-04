@@ -64,7 +64,7 @@ class SigleProduct extends Component {
             Go to &rarr;{" "}
             <i className="fa fa-shopping-cart" aria-hidden="true" />
           </Link>
-          <Link to="/">
+          <Link to="/Store">
             {" "}
             Back home &larr; <i className="fas fa-home" />
           </Link>

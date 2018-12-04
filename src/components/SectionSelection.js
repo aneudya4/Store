@@ -7,7 +7,7 @@ const SectionSelection = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/Store">
               <i className="fa fa-mobile" aria-hidden="true" />
               <p>Check out our Phones</p>
             </Link>
