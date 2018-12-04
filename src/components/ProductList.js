@@ -35,11 +35,11 @@ class product extends Component {
               <div className="item-info">
                 <span className="item-title">{names.title}</span>
 
-                <span className="price">Price:{prices.current}</span>
+                <span className="price">Price : {prices.current}</span>
                 {/* <br /> */}
                 <span className="reviews">
                   {" "}
-                  Reviews Score:{customerReviews.averageScore}
+                  Reviews Score : {customerReviews.averageScore}
                 </span>
                 <button
                   className="add-to-cart"

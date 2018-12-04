@@ -48,7 +48,7 @@ class SigleProduct extends Component {
             {prices.current !== prices.regular ? "WAS:" + prices.regular : null}
           </span>
           <span className="vote">
-            vote average : {customerReviews.averageScore}
+            Vote Average : {customerReviews.averageScore}
           </span>
         </div>
 
