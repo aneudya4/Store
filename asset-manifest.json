@@ -1,7 +1,7 @@
 {
   "main.css": "/aneudya4/Store/static/css/main.76e5f24f.chunk.css",
-  "main.js": "/aneudya4/Store/static/js/main.70bbe419.chunk.js",
-  "main.js.map": "/aneudya4/Store/static/js/main.70bbe419.chunk.js.map",
+  "main.js": "/aneudya4/Store/static/js/main.3455ce4c.chunk.js",
+  "main.js.map": "/aneudya4/Store/static/js/main.3455ce4c.chunk.js.map",
   "static/js/1.48f5204c.chunk.js": "/aneudya4/Store/static/js/1.48f5204c.chunk.js",
   "static/js/1.48f5204c.chunk.js.map": "/aneudya4/Store/static/js/1.48f5204c.chunk.js.map",
   "runtime~main.js": "/aneudya4/Store/static/js/runtime~main.eea567af.js",
@@ -9,6 +9,6 @@
   "static/media/App.scss": "/aneudya4/Store/static/media/mainbanner.9a4c619b.jpg",
   "static/css/main.76e5f24f.chunk.css.map": "/aneudya4/Store/static/css/main.76e5f24f.chunk.css.map",
   "index.html": "/aneudya4/Store/index.html",
-  "precache-manifest.8a8c6b45a4a4406d2700da371c28a811.js": "/aneudya4/Store/precache-manifest.8a8c6b45a4a4406d2700da371c28a811.js",
+  "precache-manifest.78d54704aaa230a15dc55262cd750bcb.js": "/aneudya4/Store/precache-manifest.78d54704aaa230a15dc55262cd750bcb.js",
   "service-worker.js": "/aneudya4/Store/service-worker.js"
 }
