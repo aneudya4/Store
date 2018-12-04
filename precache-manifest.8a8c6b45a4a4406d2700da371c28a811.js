@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/aneudya4/Store/static/js/runtime~main.eea567af.js"
   },
   {
-    "revision": "7353b4729321fb78447c",
-    "url": "/aneudya4/Store/static/js/main.7353b472.chunk.js"
+    "revision": "70bbe419e08f0f6da796",
+    "url": "/aneudya4/Store/static/js/main.70bbe419.chunk.js"
   },
   {
     "revision": "48f5204c7325e1e08869",
     "url": "/aneudya4/Store/static/js/1.48f5204c.chunk.js"
   },
   {
-    "revision": "7353b4729321fb78447c",
+    "revision": "70bbe419e08f0f6da796",
     "url": "/aneudya4/Store/static/css/main.76e5f24f.chunk.css"
   },
   {
-    "revision": "cc1d322e4ce23b79524d0e875bd5f44e",
+    "revision": "c6202eae36b4fdc19dff7066a7028b05",
     "url": "/aneudya4/Store/index.html"
   }
 ];
