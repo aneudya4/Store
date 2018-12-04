@@ -13,7 +13,7 @@ class App extends Component {
       <React.Fragment>
         <section className="products">
           <Switch>
-            <Route exact path="/store" component={PhoneItems} />
+            <Route exact path="/Store" component={PhoneItems} />
             <Route exact path="/accesories" component={AccesoriesItems} />
             <Route path="/product/:PhoneId" component={ProductDetails} />
             <Route path="/cart" component={Cart} />
