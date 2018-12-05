@@ -14,7 +14,7 @@ const SectionSelection = () => {
           </li>
           <li>
             {" "}
-            <Link to="/accesories">
+            <Link to="Store/accesories">
               <i className="fa fa-headphones" aria-hidden="true" />
               <p>Check out our Phone Accesories</p>
             </Link>

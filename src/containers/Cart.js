@@ -11,11 +11,13 @@ const Cart = props => {
     return (
       <div className="empty-cart">
         {" "}
-        <Header />
-        <span> Your Cart</span>
+        <Header style={{ color: "white" }} />
+        <span className="title"> Your Cart</span>
         <div className="btn">
           {" "}
-          <Link to="/Store">Go Shopping</Link>
+          <Link className="go-shopping" to="/Store">
+            Go Shopping
+          </Link>
         </div>
         <div className="empty-cart-msg">
           <p>

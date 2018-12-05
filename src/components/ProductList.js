@@ -27,7 +27,7 @@ class product extends Component {
       <div className="product-wrapper">
         {this.state.activeButton && alert("product already in cart")}
         <div className="product-info">
-          <Link to={`/product/${sku}`}>
+          <Link to={`Store/product/${sku}`}>
             <div className="phone-card">
               <figure>
                 <img src={img} alt={names.title} />
