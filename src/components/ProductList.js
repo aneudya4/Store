@@ -18,7 +18,6 @@ class product extends Component {
   };
   render() {
     const { images, names, prices, customerReviews, sku } = this.props.item;
-    console.log(images);
     const img = images.standard
       ? images.standard
       : " https://img.bbystatic.com/BestBuy_US/images/products/5967/5967100_sa.jpg";

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-left">
-        <Link to="/">I-World</Link>
+        <Link to="/Store">I-World</Link>
       </div>
       <div className="header-links-right">
         <nav className="navigation">
@@ -13,10 +13,10 @@ const Header = () => {
               <Link to="/Store">Phones</Link>
             </li>
             <li>
-              <Link to="/accesories">Accesories</Link>
+              <Link to="Store/accesories">Accesories</Link>
             </li>
             <li>
-              <Link to="/cart">
+              <Link to="Store/cart">
                 <i className="fas fa-shopping-cart" />
               </Link>
             </li>
