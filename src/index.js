@@ -12,7 +12,7 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </Provider>,
-  document.getElementById("App")
+  document.getElementById("root")
 );
 
 serviceWorker.unregister();
