@@ -15,7 +15,7 @@
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://github.com/aneudya4/Store",
+  "homepage": "https://aneudya4.github.io/Store",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
