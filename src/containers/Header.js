@@ -13,10 +13,10 @@ const Header = () => {
               <Link to="/Store">Phones</Link>
             </li>
             <li>
-              <Link to="Store/accesories">Accesories</Link>
+              <Link to="/Store/accesories">Accesories</Link>
             </li>
             <li>
-              <Link to="Store/cart">
+              <Link to="/Store/cart">
                 <i className="fas fa-shopping-cart" />
               </Link>
             </li>

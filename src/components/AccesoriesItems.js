@@ -18,11 +18,9 @@ class AccesoriesItems extends Component {
         <Header />
         <MainBanner />
         <SectionSelection />
-        <div className="product-grid">
-          {items.map(item => (
-            <ProductList key={item.sku} item={item} />
-          ))}{" "}
-        </div>
+        {items.map(item => (
+          <ProductList key={item.sku} item={item} />
+        ))}{" "}
       </React.Fragment>
     );
   }

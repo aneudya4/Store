@@ -14,9 +14,9 @@ class App extends Component {
         <section className="products">
           <Switch>
             <Route exact path="/Store" component={PhoneItems} />
-            <Route exact path="Store/accesories" component={AccesoriesItems} />
-            <Route path="Store/product/:PhoneId" component={ProductDetails} />
-            <Route path="Store/cart" component={Cart} />
+            <Route exact path="/Store/accesories" component={AccesoriesItems} />
+            <Route path="/Store/product/:PhoneId" component={ProductDetails} />
+            <Route path="/Store/cart" component={Cart} />
           </Switch>
         </section>
       </React.Fragment>

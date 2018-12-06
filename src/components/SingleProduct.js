@@ -60,7 +60,7 @@ class SigleProduct extends Component {
             {this.state.activeButton ? "Already in cart" : "Add To Cart"}
           </button>
 
-          <Link to="Store/cart">
+          <Link to="/Store/cart">
             Go to &rarr;{" "}
             <i className="fa fa-shopping-cart" aria-hidden="true" />
           </Link>
