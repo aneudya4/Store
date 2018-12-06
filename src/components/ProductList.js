@@ -8,7 +8,7 @@ class product extends Component {
     activeButton: false
   };
   onClickAdd = item => {
-    let newItem = this.props.cart.find(i => i.sku === item.sku);
+    let newItem = this.itemInCart(item);
     if (newItem) {
       this.setState({ activeButton: true });
       return null;
@@ -16,6 +16,10 @@ class product extends Component {
       return this.props.addToCart(item);
     }
   };
+
+  itemInCart(item) {
+    return this.props.cart.find(i => i.sku === item.sku);
+  }
   render() {
     const { images, names, prices, customerReviews, sku } = this.props.item;
     const img = images.standard
@@ -27,30 +31,33 @@ class product extends Component {
         <div className="product-wrapper">
           {this.state.activeButton && alert("product already in cart")}
           <div className="product-info">
-            <Link to={`/Store/product/${sku}`}>
-              <div className="phone-card">
+            <div className="phone-card">
+              <Link to={`/Store/product/${sku}`}>
                 <figure>
                   <img src={img} alt={names.title} />
                 </figure>
-                <div className="item-info">
-                  <span className="item-title">{names.title}</span>
+              </Link>
+              <div className="item-info">
+                <span className="item-title">{names.title}</span>
 
-                  <span className="price">Price : {prices.current}</span>
-                  {/* <br /> */}
-                  <span className="reviews">
-                    {" "}
-                    Reviews Score : {customerReviews.averageScore}
-                  </span>
-                  <button
-                    className="add-to-cart"
-                    disable={this.state.activeButton.toString()}
-                    onClick={() => this.onClickAdd(this.props.item)}
-                  >
-                    Add To Cart
-                  </button>
-                </div>
+                <span className="price">Price : {prices.current}</span>
+                <span className="reviews">
+                  {" "}
+                  Reviews Score : {customerReviews.averageScore}
+                </span>
+                <button
+                  className={
+                    this.itemInCart(this.props.item) ? "in-cart" : "add-to-cart"
+                  }
+                  disable={this.state.activeButton.toString()}
+                  onClick={() => this.onClickAdd(this.props.item)}
+                >
+                  {this.itemInCart(this.props.item)
+                    ? "already in cart "
+                    : "add to cart"}
+                </button>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </div>

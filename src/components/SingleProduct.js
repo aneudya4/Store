@@ -32,6 +32,7 @@ class SigleProduct extends Component {
       customerReviews
     } = this.props.product;
 
+    const { activeButton } = this.state;
     return (
       <div className="single-product">
         <h1>{names.title} </h1>
@@ -54,7 +55,8 @@ class SigleProduct extends Component {
 
         <div className="btns">
           <button
-            disabled={this.state.activeButton}
+            disabled={activeButton}
+            className={activeButton ? "in-cart" : null}
             onClick={() => this.onClickAdd(this.props.product)}
           >
             {this.state.activeButton ? "Already in cart" : "Add To Cart"}
