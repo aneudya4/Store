@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../containers/Header";
 import CartDetails from "../components/CartDetails";
 
@@ -11,14 +10,9 @@ const Cart = props => {
     return (
       <div className="empty-cart">
         {" "}
-        <Header style={{ color: "white" }} />
-        <span className="title"> Your Cart</span>
-        <div className="btn">
-          {" "}
-          <Link className="go-shopping" to="/Store">
-            Go Shopping
-          </Link>
-        </div>
+        <Header />
+        <span className="title-cart"> Your Cart</span>
+        <div className="btn"> </div>
         <div className="empty-cart-msg">
           <p>
             It looks like your cart is empty...
