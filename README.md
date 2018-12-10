@@ -1,7 +1,7 @@
 # Comparing-movies-app
 
 My version of a mobile phone Store, <br/>
-the products are being fetch by from the www.bestbuy.com api.
+the products are being fetch from the www.bestbuy.com api.
 
 <h2> Usage </h2>
 this is pure educational, the products on this website cant be bought.
