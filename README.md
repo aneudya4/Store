@@ -1,4 +1,4 @@
-# Comparing-movies-app
+# I-World Phone Store
 
 My version of a mobile phone Store, <br/>
 the products are being fetch from the www.bestbuy.com api.
