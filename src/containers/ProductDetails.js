@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import SingleProduct from "../components/SingleProduct";
 import Header from "./Header";
+import PropTypes from "prop-types";
+
 class ProductDetails extends Component {
   componentDidMount() {
     const { activePhone, fetchItems } = this.props;
@@ -37,6 +39,12 @@ const mapStateToProps = ({ phones, cart }) => {
     activePhone: phones,
     cart
   };
+};
+
+ProductDetails.propTypes = {
+  activePhone: PropTypes.array.isRequired,
+  cart: PropTypes.array.isRequired,
+  fetchItems: PropTypes.func.isRequired
 };
 
 export default connect(

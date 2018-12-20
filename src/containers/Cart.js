@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React from "react";
 import Header from "../containers/Header";
 import CartDetails from "../components/CartDetails";
+import PropTypes from "prop-types";
 
 const Cart = props => {
   const { cart } = props;
@@ -36,7 +37,10 @@ const Cart = props => {
       ))}{" "}
       <div className="checkout">
         <i className="fas fa-credit-card" />
-        <h3>TOTAL:{total.toFixed(2)}</h3>
+        <h3>
+          TOTAL:
+          {total.toFixed(2)}
+        </h3>
       </div>
     </div>
   );
@@ -48,4 +52,7 @@ const mapStateToProps = ({ cart }) => {
   };
 };
 
+Cart.propTypes = {
+  cart: PropTypes.array.isRequired
+};
 export default connect(mapStateToProps)(Cart);

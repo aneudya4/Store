@@ -6,6 +6,8 @@ import ProductList from "./ProductList";
 import Header from "../containers/Header";
 import MainBanner from "../containers/MainBanner";
 import SectionSelection from "../components/SectionSelection";
+import PropTypes from "prop-types";
+
 class AccesoriesItems extends Component {
   componentDidMount() {
     this.props.fetchItems(phonesAccesories);
@@ -24,7 +26,6 @@ class AccesoriesItems extends Component {
       </React.Fragment>
     );
   }
-  //ProductList(Products)->ProductItem
 }
 
 const mapStateToProps = ({ phonesAccesories }) => {
@@ -33,6 +34,10 @@ const mapStateToProps = ({ phonesAccesories }) => {
   };
 };
 
+AccesoriesItems.propTypes = {
+  phonesAccesories: PropTypes.array.isRequired,
+  fetchItems: PropTypes.func.isRequired
+};
 export default connect(
   mapStateToProps,
   { fetchItems }
