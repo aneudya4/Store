@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { addToCart, removeFromCart } from "./../actions/index";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class SigleProduct extends Component {
   state = {
@@ -11,19 +12,21 @@ class SigleProduct extends Component {
     let newItem = this.props.cart.find(i => i.sku === product.sku);
     if (newItem) {
       this.setState({ activeButton: true });
-      return null;
+      return;
     } else {
       return this.props.addToCart(product);
     }
   };
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       activeButton: this.props.cart.find(i => i.sku === this.props.path)
     });
   }
 
   render() {
+    let optionalImg =
+      "https://img.bbystatic.com/BestBuy_US/images/products/6287/6287787_sa.jpg";
     const {
       images,
       names,
@@ -31,12 +34,13 @@ class SigleProduct extends Component {
       descriptions,
       customerReviews
     } = this.props.product;
+    console.log(images);
 
     const { activeButton } = this.state;
     return (
       <div className="single-product">
         <h1>{names.title} </h1>
-        <img src={images.standard} alt={names.title} />
+        <img src={images.standard || optionalImg} alt={names.title} />
         <p className="item-description"> {descriptions.short}</p>
         <div className="single-price">
           {
@@ -59,7 +63,7 @@ class SigleProduct extends Component {
             className={activeButton ? "in-cart" : null}
             onClick={() => this.onClickAdd(this.props.product)}
           >
-            {this.state.activeButton ? "Already in cart" : "Add To Cart"}
+            {this.state.activeButton ? "Added to cart" : "Add To Cart"}
           </button>
 
           <Link to="/Store/cart">
@@ -82,6 +86,11 @@ const mapStateToProps = ({ cart }) => {
   };
 };
 
+SigleProduct.propTypes = {
+  cart: PropTypes.array.isRequired,
+  addToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired
+};
 export default connect(
   mapStateToProps,
   { addToCart, removeFromCart }

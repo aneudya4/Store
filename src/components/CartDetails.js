@@ -32,6 +32,7 @@ const CartDetails = props => {
 CartDetails.propTypes = {
   removeFromCart: PropTypes.func.isRequired
 };
+
 export default connect(
   null,
   { removeFromCart }

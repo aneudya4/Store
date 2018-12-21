@@ -2,8 +2,9 @@ import { addToCart } from "../actions/index";
 import { connect } from "react-redux";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-class product extends Component {
+class ProductList extends Component {
   state = {
     activeButton: false
   };
@@ -69,7 +70,12 @@ const mapStateToProps = ({ cart }) => {
   return { cart };
 };
 
+ProductList.propTypes = {
+  cart: PropTypes.array.isRequired,
+  addToCart: PropTypes.func.isRequired
+};
+
 export default connect(
   mapStateToProps,
   { addToCart }
-)(product);
+)(ProductList);

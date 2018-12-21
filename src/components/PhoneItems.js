@@ -6,6 +6,7 @@ import ProductList from "./ProductList";
 import Header from "../containers/Header";
 import MainBanner from "../containers/MainBanner";
 import SectionSelection from "../components/SectionSelection";
+import PropTypes from "prop-types";
 
 class PhoneItems extends Component {
   componentDidMount() {
@@ -33,6 +34,11 @@ const mapStateToProps = ({ phones }) => {
   return {
     phones
   };
+};
+
+PhoneItems.propTypes = {
+  phones: PropTypes.array.isRequired,
+  fetchItems: PropTypes.func.isRequired
 };
 
 export default connect(
