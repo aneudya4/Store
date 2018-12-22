@@ -20,7 +20,7 @@ class PhoneItems extends Component {
         <Header />
         <MainBanner />
         <SectionSelection />
-        <div className="product-grid">
+        <div className="product-grid bg-color">
           {items.map(item => (
             <ProductList key={item.sku} item={item} />
           ))}{" "}

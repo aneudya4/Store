@@ -20,9 +20,11 @@ class AccesoriesItems extends Component {
         <Header />
         <MainBanner />
         <SectionSelection />
-        {items.map(item => (
-          <ProductList key={item.sku} item={item} />
-        ))}{" "}
+        <div className="product-grid bg-color">
+          {items.map(item => (
+            <ProductList key={item.sku} item={item} />
+          ))}{" "}
+        </div>
       </React.Fragment>
     );
   }
@@ -38,6 +40,7 @@ AccesoriesItems.propTypes = {
   phonesAccesories: PropTypes.array.isRequired,
   fetchItems: PropTypes.func.isRequired
 };
+
 export default connect(
   mapStateToProps,
   { fetchItems }

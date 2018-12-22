@@ -1,0 +1,10 @@
+@mixin clearMixin {
+  // -webkit-transform: $property;
+  // -ms-transform: $property;
+  // transform: $property;
+  &::after {
+    content: "";
+    display: block;
+    clear: left;
+  }
+}

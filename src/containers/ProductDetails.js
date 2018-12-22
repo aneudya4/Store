@@ -18,7 +18,7 @@ class ProductDetails extends Component {
     const { PhoneId } = this.props.match.params;
     const { activePhone } = this.props;
     const product = activePhone.find(c => c.sku === PhoneId);
-    const loadingProduct = <div> Loading </div>;
+    const loadingProduct = <div> Loading Product</div>;
     return (
       <div>
         <Header />

@@ -34,7 +34,6 @@ class SigleProduct extends Component {
       descriptions,
       customerReviews
     } = this.props.product;
-    console.log(images);
 
     const { activeButton } = this.state;
     return (

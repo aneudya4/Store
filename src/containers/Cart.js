@@ -2,11 +2,11 @@ import { connect } from "react-redux";
 import React from "react";
 import Header from "../containers/Header";
 import CartDetails from "../components/CartDetails";
+import CheckOut from "./CheckOut";
 import PropTypes from "prop-types";
 
 const Cart = props => {
   const { cart } = props;
-
   if (props.cart.length === 0) {
     return (
       <div className="empty-cart">
@@ -33,15 +33,9 @@ const Cart = props => {
     <div>
       <Header />
       {cart.map(item => (
-        <CartDetails key={item.sku} item={item} total={total} />
+        <CartDetails key={item.sku} item={item} />
       ))}{" "}
-      <div className="checkout">
-        <i className="fas fa-credit-card" />
-        <h3>
-          TOTAL:
-          {total.toFixed(2)}
-        </h3>
-      </div>
+      <CheckOut total={total} />
     </div>
   );
 };
