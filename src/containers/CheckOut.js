@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const CheckOut = ({ total }) => {
   return (
@@ -10,6 +11,10 @@ const CheckOut = ({ total }) => {
       </h3>
     </div>
   );
+};
+
+CheckOut.propTypes = {
+  total: PropTypes.number
 };
 
 export default CheckOut;
