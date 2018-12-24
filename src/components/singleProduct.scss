@@ -3,17 +3,12 @@
   padding: 2rem;
   text-align: center;
   .in-cart {
-    background: $header-bgcolor;
+    @include buttonMixin;
     background-color: lighten($header-bgcolor, 10%);
     margin-top: auto;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 7%;
   }
   img {
     margin: 2rem 0;
-    border-radius: 2rem;
     width: 10%;
 
     &:hover {
@@ -22,7 +17,7 @@
   }
 
   p {
-    width: 50rem;
+    width: 50%;
     font-size: 1.5rem;
     margin-bottom: 1.4rem;
   }
@@ -34,21 +29,15 @@
     @extend .old-price;
   }
   button {
-    background: $header-bgcolor;
-    color: white;
-    padding: 1rem;
-    border-radius: 1rem;
+    @include buttonMixin;
     font-size: 2rem;
     display: block;
-    cursor: pointer;
   }
   a {
-    background: $header-bgcolor;
+    @include buttonMixin;
     margin-top: 1rem;
     margin-right: 1rem;
     display: inline-block;
-    border: 2px solid lighten(lightgrey, 8%);
-    padding: 1rem;
-    border-radius: 1rem;
+    border: 1px solid lighten(lightgrey, 8%);
   }
 }

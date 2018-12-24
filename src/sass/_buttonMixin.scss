@@ -1,0 +1,7 @@
+@mixin buttonMixin {
+  padding: 1rem;
+  border-radius: 8px;
+  background: $header-bgcolor;
+  cursor: pointer;
+  color: white;
+}

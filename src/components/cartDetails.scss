@@ -1,11 +1,9 @@
 .cart-items {
   font-size: 2rem;
-  width: 90rem;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
   margin-top: 2rem;
-  background: white;
   .cart-buying-option {
     text-align: center;
   }
@@ -15,7 +13,7 @@
     display: inline;
 
     img {
-      width: 17%;
+      width: 9%;
     }
   }
   &-details {
@@ -26,11 +24,9 @@
   }
 
   .remove-cart-item {
+    @include buttonMixin;
     color: white;
     background: $header-bgcolor;
-    padding: 1rem;
     text-transform: uppercase;
-    border-radius: 7%;
-    cursor: pointer;
   }
 }

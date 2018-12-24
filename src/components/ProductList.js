@@ -47,14 +47,16 @@ class ProductList extends Component {
               </span>
               <button
                 className={
-                  this.itemInCart(this.props.item) ? "in-cart" : "add-to-cart"
+                  this.itemInCart(this.props.item) ? "view-cart" : "add-to-cart"
                 }
                 disable={this.state.activeButton.toString()}
                 onClick={() => this.onClickAdd(this.props.item)}
               >
-                {this.itemInCart(this.props.item)
-                  ? "already in cart "
-                  : "add to cart"}
+                {this.itemInCart(this.props.item) ? (
+                  <Link to="/store/cart">view Cart </Link>
+                ) : (
+                  "add to cart"
+                )}
               </button>
             </div>
           </div>
