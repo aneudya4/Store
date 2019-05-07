@@ -3,6 +3,7 @@
 My version of a mobile phone Store, <br/>
 the products are being fetch from the www.bestbuy.com api.
 
+<h2> api response needs to  be changed! ill work on  it soon  </h2>
 <h2> Usage </h2>
 this is purely educational, the products on this website cant be bought.
 
